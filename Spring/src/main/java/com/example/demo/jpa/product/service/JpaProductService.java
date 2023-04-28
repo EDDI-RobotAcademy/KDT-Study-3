@@ -5,4 +5,6 @@ import java.util.List;
 
 public interface JpaProductService {
     List<JpaProduct> list();
+
+    JpaProduct read(Long productId);
 }
