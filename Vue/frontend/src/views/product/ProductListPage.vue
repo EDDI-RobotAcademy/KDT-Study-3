@@ -1,10 +1,9 @@
-<template lang="">
+<template>
     <div>
         <h2>상품 게시판</h2>
-        <!--
-        <router-link :to="{ name: '' }">
+        <router-link :to="{ name: 'ProductRegistPage' }">
             게시물 작성
-        </router-link> -->
+        </router-link>
         <product-list-form :products="products"/>
     </div>
 </template>

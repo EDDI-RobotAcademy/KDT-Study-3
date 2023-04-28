@@ -4,6 +4,7 @@ import HomeView from '../views/HomeView.vue'
 import ProductReadPage from '@/views/product/ProductReadPage.vue'
 
 import ProductListPage from '@/views/product/ProductListPage.vue'
+import ProductRegistPage from "@/views/product/ProductRegistPage.vue";
 
 Vue.use(VueRouter)
 
@@ -30,6 +31,11 @@ const routes = [
     path: '/product-read-page',
     name: 'ProductReadPage',
     component: ProductReadPage
+  },
+  {
+    path: '/product-regist-page',
+    name: 'ProductRegistPage',
+    component: ProductRegistPage
   },
 
 ]
