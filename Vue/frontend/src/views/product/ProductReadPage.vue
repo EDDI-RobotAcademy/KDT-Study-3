@@ -10,11 +10,28 @@
     </div>
 </template>
 <script>
+import ProductModule from '@/store/product/ProductModule';
+import { mapActions } from 'vuex';
+
 export default {
+
     comments: {
         ProductReadForm
     },
-    methods: {            
+
+    computed: {
+        ...mapState(ProductModule,['product'])
+    },
+
+    methods: {     
+        ...mapActions(
+            ProductModule, ['requestProductToSpring']
+        ),
+
+        },
+
+    created() {
+            this.requestProductToSpring(this.productId)
         },
     }
     
