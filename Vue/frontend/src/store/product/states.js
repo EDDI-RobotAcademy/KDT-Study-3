@@ -1,4 +1,4 @@
 export default {
-    boards: [],
-    board: {},
+    productList: [],
+    product: {},
 }
