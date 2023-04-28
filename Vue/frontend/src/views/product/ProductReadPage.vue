@@ -35,8 +35,6 @@ export default {
             this.requestProductToSpring(this.productId)
         },
     }
-    
-
 </script>
 <style lang="">
     
