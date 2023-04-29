@@ -9,31 +9,31 @@
                     </td>
                 </tr> 
                 <tr>
-                    <td>상품명</td>
+                    <td>Product Name</td>
                     <td>
                         <input type="text" :value="product.productName" disabled/>
                     </td>
                 </tr> 
                 <tr>
-                    <td>상품가격</td>
+                    <td>Product Price</td>
                     <td>
                         <input type="text" v-model="productPrice" />
                     </td>
                 </tr>  
                 <tr>
-                    <td>제조사</td>
+                    <td>Vendor</td>
                     <td>
                         <input type="text" :v-model="product.vendor" />
                     </td>
                 </tr>  
                 <tr>
-                    <td>제조일</td>
+                    <td>Manufacture Date</td>
                     <td>
                         <input type="text" :value="product.manufactureDate" disabled/>
                     </td>
                 </tr>  
                 <tr>
-                    <td>상품 카테고리</td>
+                    <td>Category</td>
                     <td>
                         <input type="text" v-model="product.category" />
                     </td>
@@ -41,13 +41,12 @@
             </table>
 
             <div>
-                <button type="submit">수정 완료</button>
+                <button type="submit">Completion</button>
                 <router-link
                 :to = "{
                     name: 'ProductReadPage',
                     params: { productId: product.productId.toString() },
-                }">
-                    수정 취소
+                }">Cancel
                 </router-link>
             </div>
         </form>
