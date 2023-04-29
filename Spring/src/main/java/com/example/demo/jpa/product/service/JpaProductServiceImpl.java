@@ -26,7 +26,7 @@ public class JpaProductServiceImpl implements JpaProductService {
     public JpaProduct read(Long productId) {
         Optional<JpaProduct> maybeJpaProduct = productRepository.findById(productId);
 
-        if(maybeJpaProduct.isEmpty()) {
+        if(maybeJpaProduct.equals("")) {
             log.info("정보가 없습니다!");
             return null;
         }
