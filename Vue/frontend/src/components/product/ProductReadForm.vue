@@ -16,19 +16,13 @@
             <tr>
                 <td>제조사</td>
                 <td>
-                    <input type="text" :value="product.maker" readonly/>
+                    <input type="text" :value="product.vendor" readonly/>
                 </td>
-            </tr>  
-            <tr>
-                <td>유통기한</td>
-                <td>
-                    <input type="text" :value="product.EXP" readonly/>
-                </td>
-            </tr>  
+            </tr>         
             <tr>
                 <td>제조일</td>
                 <td>
-                    <input type="text" :value="product.MFG" readonly/>
+                    <input type="text" :value="product.manufactureDate" readonly/>
                 </td>
             </tr>  
             <tr>
