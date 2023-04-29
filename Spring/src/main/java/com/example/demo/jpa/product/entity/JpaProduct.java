@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -15,6 +16,7 @@ import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
+@Getter
 @ToString
 @NoArgsConstructor
 public class JpaProduct {
