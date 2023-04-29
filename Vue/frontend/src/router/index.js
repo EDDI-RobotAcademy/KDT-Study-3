@@ -1,10 +1,11 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import ProductReadPage from '@/views/product/ProductReadPage.vue'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import HomeView from '../views/HomeView.vue';
 
-import ProductListPage from '@/views/product/ProductListPage.vue'
 import ProductRegistPage from "@/views/product/ProductRegistPage.vue";
+import ProductReadPage from '@/views/product/ProductReadPage.vue';
+import ProductListPage from '@/views/product/ProductListPage.vue';
+import ProductModifyPage from "@/views/product/ProductModifyPage.vue";
 
 Vue.use(VueRouter)
 
@@ -13,6 +14,11 @@ const routes = [
     path: '/',
     name: 'home',
     component: HomeView
+  },
+  {
+    path: '/product-modify-page',
+    name: "ProductModifyPage",
+    component: ProductModifyPage,
   },
   {
     path: '/about',
