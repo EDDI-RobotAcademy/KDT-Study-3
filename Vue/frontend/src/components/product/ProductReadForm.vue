@@ -2,31 +2,37 @@
     <div>
         <table>
             <tr>
-                <td>상품명</td>
+                <td>Product ID</td>
+                <td>
+                    <input type="text" :value="product.productId" readonly/>
+                </td>
+            </tr>
+            <tr>
+                <td>Product Name</td>
                 <td>
                     <input type="text" :value="product.productName" readonly/>
                 </td>
             </tr> 
             <tr>
-                <td>상품가격</td>
+                <td>Product Price</td>
                 <td>
                     <input type="text" :value="product.productPrice" readonly/>
                 </td>
             </tr>  
             <tr>
-                <td>제조사</td>
+                <td>Vendor</td>
                 <td>
                     <input type="text" :value="product.vendor" readonly/>
                 </td>
             </tr>         
             <tr>
-                <td>제조일</td>
+                <td>Manufacture Date</td>
                 <td>
                     <input type="text" :value="product.manufactureDate" readonly/>
                 </td>
             </tr>  
             <tr>
-                <td>상품 카테고리</td>
+                <td>Category</td>
                 <td>
                     <input type="text" :value="product.category" readonly/>
                 </td>

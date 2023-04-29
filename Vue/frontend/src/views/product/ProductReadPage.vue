@@ -1,16 +1,16 @@
 <template>
     <div>
-        <h2>상품 정보 읽기</h2>
-        <product-read-form/>
-
+        <h2>Product Page</h2>
+        <product-read-form v-if="product" :product="product"/>
+        <p v-else>Loading ...</p>
         <router-link :to="{ name: 'ProductModifyPage', params: { productId }}">
-            게시물 수정
+            Modify Page
         </router-link>
         <button @click="onDelete">
-            삭제
+            Delete
         </button>
         <router-link :to="{ name:'ProductListPage' }">
-            돌아가기
+            To PageList
         </router-link>
     </div>
 </template>
