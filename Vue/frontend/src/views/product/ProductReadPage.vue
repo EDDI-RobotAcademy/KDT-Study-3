@@ -9,14 +9,14 @@
         <button @click="onDelete">
             삭제
         </button>
-        <router-link :to="{ name:'product-list-page' }">
+        <router-link :to="{ name:'ProductListPage' }">
             돌아가기
         </router-link>
     </div>
 </template>
 
 <script>
-import ProductReadForm from '@/components/ProductReadForm.vue';
+import ProductReadForm from '@/components/product/ProductReadForm.vue';
 import { mapActions, mapState } from 'vuex';
 
 const productModule = 'productModule'
