@@ -3,7 +3,7 @@
         <form @submit.prevent="onSubmit">
             <table>
                 <tr>
-                    <td>Product Number</td>
+                    <td>Product ID</td>
                     <td>
                         <input type="text" :value="product.productId" disabled/>
                     </td>
