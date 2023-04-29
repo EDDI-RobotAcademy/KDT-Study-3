@@ -10,10 +10,11 @@
     </div>
 </template>
 <script>
-import ProductModule from '@/store/product/ProductModule';
+
 import { mapActions, mapState } from 'vuex';
 import ProductReadForm from '@/components/ProductReadForm.vue';
 
+const productModule = 'productModule'
 export default {
 
     comments: {
@@ -21,12 +22,12 @@ export default {
     },
 
     computed: {
-        ...mapState(ProductModule,['product'])
+        ...mapState(productModule,['product'])
     },
 
     methods: {     
         ...mapActions(
-            ProductModule, ['requestProductToSpring']
+            productModule, ['requestProductToSpring']
         ),
 
         },
