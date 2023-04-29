@@ -2,14 +2,12 @@
     <div>
         <form @submit.prevent="onSubmit">
             <table>
-                <!-- 읽기 페이지에 상품 번호 누락 되어 있어서 수정 페이지에서는 추가하였습니다. -->
                 <tr>
                     <td>상품 번호</td>
                     <td>
                         <input type="text" :value="product.productId" disabled/>
                     </td>
                 </tr> 
-                <tr>
                 <tr>
                     <td>상품명</td>
                     <td>
@@ -26,12 +24,6 @@
                     <td>제조사</td>
                     <td>
                         <input type="text" :v-model="product.vendor" />
-                    </td>
-                </tr>  
-                <tr>
-                    <td>유통기한</td>
-                    <td>
-                        <input type="text" :value="product.expiredDate" disabled/>
                     </td>
                 </tr>  
                 <tr>
@@ -75,7 +67,6 @@ export default {
             productName: "",
             productPrice: "",
             vendor: "",
-            expiredDate: "",
             manufactureDate: "",
             category: ""
         };
@@ -84,7 +75,6 @@ export default {
         this.productName = this.product.productName;
         this.productPrice = this.product.productPrice;
         this.vendor = this.product.vendor;
-        this.expiredDate = this.product.expiredDate;
         this.manufactureDate = this.product.manufactureDate;
         this.category = this.product.category;
     },
