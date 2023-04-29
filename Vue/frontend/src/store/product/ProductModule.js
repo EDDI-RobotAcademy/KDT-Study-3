@@ -8,7 +8,7 @@ import states from "@/store/product/states"
 Vue.use(Vuex)
 
 const ProductModule = {
-    namespace: true,
+    namespaced: true,
     states,
     mutations,
     actions,
