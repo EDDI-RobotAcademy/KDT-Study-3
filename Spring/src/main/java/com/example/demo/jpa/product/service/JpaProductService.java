@@ -7,4 +7,5 @@ public interface JpaProductService {
     List<JpaProduct> list();
 
     JpaProduct read(Long productId);
+    JpaProduct register(JpaProduct jpaProduct);
 }
