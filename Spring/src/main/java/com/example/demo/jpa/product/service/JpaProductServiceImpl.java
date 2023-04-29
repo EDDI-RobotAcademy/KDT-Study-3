@@ -32,4 +32,9 @@ public class JpaProductServiceImpl implements JpaProductService {
         }
         return maybeJpaProduct.get();
     }
+
+    @Override
+    public JpaProduct register(JpaProduct jpaProduct) {
+        return productRepository.save(jpaProduct);
+    }
 }

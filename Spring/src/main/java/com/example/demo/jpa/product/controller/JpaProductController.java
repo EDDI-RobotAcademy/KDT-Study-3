@@ -1,13 +1,11 @@
 package com.example.demo.jpa.product.controller;
 
+import com.example.demo.jpa.product.controller.form.RequestProductForm;
 import com.example.demo.jpa.product.entity.JpaProduct;
 import com.example.demo.jpa.product.service.JpaProductService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -24,6 +22,13 @@ public class JpaProductController {
         log.info("productList()");
 
         return productService.list();
+    }
+
+    @PostMapping("/register")
+    public JpaProduct registerProduct (@RequestBody RequestProductForm requestProductForm) {
+        log.info("registerProduct()");
+
+        return productService.register(requestProductForm.toJpaProduct());
     }
 
     @GetMapping("/{productId}")
