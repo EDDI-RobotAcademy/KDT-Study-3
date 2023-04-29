@@ -1,9 +1,11 @@
 package com.example.demo.jpa.product.controller.form;
 
 import com.example.demo.jpa.product.entity.JpaProduct;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
+import java.time.LocalDate;
 
 @Getter
 @ToString
@@ -11,9 +13,10 @@ import lombok.ToString;
 public class RequestProductForm {
 
     final private String productName;
-    final private String productPrice;
+    final private Integer productPrice;
     final private String vendor;
-    final private String manufactureDate;
+    @JsonFormat(pattern="yyyy-MM-dd")
+    final private LocalDate manufactureDate;
     final private String category;
 
     public JpaProduct toJpaProduct () {

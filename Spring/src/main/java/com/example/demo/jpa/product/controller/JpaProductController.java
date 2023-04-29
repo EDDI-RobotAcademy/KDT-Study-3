@@ -37,4 +37,10 @@ public class JpaProductController {
 
         return productService.read(productId);
     }
+
+    @DeleteMapping("/{productId}")
+    public void delete (@PathVariable("productId") Long productId) {
+        log.info("delete " + productId);
+        productService.delete(productId);
+    }
 }

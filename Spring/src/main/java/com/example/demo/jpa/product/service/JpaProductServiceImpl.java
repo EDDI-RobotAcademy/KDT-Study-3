@@ -37,4 +37,8 @@ public class JpaProductServiceImpl implements JpaProductService {
     public JpaProduct register(JpaProduct jpaProduct) {
         return productRepository.save(jpaProduct);
     }
+    @Override
+    public void delete(Long productId) {
+        productRepository.deleteById(productId);
+    }
 }
