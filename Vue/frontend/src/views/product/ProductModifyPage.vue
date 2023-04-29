@@ -1,4 +1,4 @@
-<template lang="">
+<template>
     <div>
         <h2>상품 게시물 수정</h2>
         <product-modify-form v-if="product" :poduct="product" @submit="onSubmit"/>
@@ -49,4 +49,4 @@ export default {
 };
 </script>
 
-<style lang=""></style>
+<style></style>
