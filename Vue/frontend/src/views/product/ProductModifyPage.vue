@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import ProductModifyForm from '@/components/ProductModifyForm.vue';
+import ProductModifyForm from '@/components/product/ProductModifyForm.vue';
 import { mapActions, mapState } from "vuex";
 
 const ProductModule = "productModule";

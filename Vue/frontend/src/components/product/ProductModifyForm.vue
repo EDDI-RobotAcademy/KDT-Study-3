@@ -2,46 +2,38 @@
     <div>
         <form @submit.prevent="onSubmit">
             <table>
-                <!-- 읽기 페이지에 상품 번호 누락 되어 있어서 수정 페이지에서는 추가하였습니다. -->
                 <tr>
-                    <td>상품 번호</td>
+                    <td>Product Number</td>
                     <td>
                         <input type="text" :value="product.productId" disabled/>
                     </td>
                 </tr> 
                 <tr>
-                <tr>
-                    <td>상품명</td>
+                    <td>Product Name</td>
                     <td>
                         <input type="text" :value="product.productName" disabled/>
                     </td>
                 </tr> 
                 <tr>
-                    <td>상품가격</td>
+                    <td>Product Price</td>
                     <td>
                         <input type="text" v-model="productPrice" />
                     </td>
                 </tr>  
                 <tr>
-                    <td>제조사</td>
+                    <td>Vendor</td>
                     <td>
                         <input type="text" :v-model="product.vendor" />
                     </td>
                 </tr>  
                 <tr>
-                    <td>유통기한</td>
-                    <td>
-                        <input type="text" :value="product.expiredDate" disabled/>
-                    </td>
-                </tr>  
-                <tr>
-                    <td>제조일</td>
+                    <td>Manufacture Date</td>
                     <td>
                         <input type="text" :value="product.manufactureDate" disabled/>
                     </td>
                 </tr>  
                 <tr>
-                    <td>상품 카테고리</td>
+                    <td>Category</td>
                     <td>
                         <input type="text" v-model="product.category" />
                     </td>
@@ -49,13 +41,12 @@
             </table>
 
             <div>
-                <button type="submit">수정 완료</button>
+                <button type="submit">Completion</button>
                 <router-link
                 :to = "{
                     name: 'ProductReadPage',
                     params: { productId: product.productId.toString() },
-                }">
-                    수정 취소
+                }">Cancel
                 </router-link>
             </div>
         </form>
@@ -75,7 +66,6 @@ export default {
             productName: "",
             productPrice: "",
             vendor: "",
-            expiredDate: "",
             manufactureDate: "",
             category: ""
         };
@@ -84,7 +74,6 @@ export default {
         this.productName = this.product.productName;
         this.productPrice = this.product.productPrice;
         this.vendor = this.product.vendor;
-        this.expiredDate = this.product.expiredDate;
         this.manufactureDate = this.product.manufactureDate;
         this.category = this.product.category;
     },
