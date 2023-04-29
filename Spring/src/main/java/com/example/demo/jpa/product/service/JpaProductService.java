@@ -8,4 +8,5 @@ public interface JpaProductService {
 
     JpaProduct read(Long productId);
     JpaProduct register(JpaProduct jpaProduct);
+    void delete(Long productId);
 }
