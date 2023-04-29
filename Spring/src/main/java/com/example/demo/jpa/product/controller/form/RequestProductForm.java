@@ -13,11 +13,10 @@ public class RequestProductForm {
     final private String productName;
     final private String productPrice;
     final private String vendor;
-    final private String expiredDate;
     final private String manufactureDate;
     final private String category;
 
     public JpaProduct toJpaProduct () {
-        return new JpaProduct(productName, productPrice, vendor, expiredDate, manufactureDate, category);
+        return new JpaProduct(productName, productPrice, vendor, manufactureDate, category);
     }
 }
