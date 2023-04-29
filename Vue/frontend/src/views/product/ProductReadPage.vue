@@ -1,4 +1,4 @@
-<template lang="">
+<template>
     <div>
         <h2>상품 정보 읽기</h2>
         <product-read-form/>
@@ -14,10 +14,12 @@
         </router-link>
     </div>
 </template>
+
 <script>
-import ProductModule from '@/store/product/ProductModule';
 import ProductReadForm from '@/components/ProductReadForm.vue';
 import { mapActions, mapState } from 'vuex';
+
+const productModule = 'productModule'
 
 export default {
     components: {
@@ -30,12 +32,12 @@ export default {
         }
     },
     computed: {
-        ...mapState(ProductModule,['product'])
+        ...mapState(productModule,['product'])
     },
 
     methods: {     
         ...mapActions(
-            ProductModule, ['requestProductToSpring']
+            productModule, ['requestProductToSpring']
         ),
     },
     created() {
@@ -43,6 +45,5 @@ export default {
         },
     }
 </script>
-<style lang="">
-    
-</style>
+
+<style></style>

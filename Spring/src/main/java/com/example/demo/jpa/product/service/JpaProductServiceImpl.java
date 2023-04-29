@@ -23,14 +23,13 @@ public class JpaProductServiceImpl implements JpaProductService {
     }
 
     @Override
-    public JpaProduct read(Long productId){
+    public JpaProduct read(Long productId) {
         Optional<JpaProduct> maybeJpaProduct = productRepository.findById(productId);
 
-        if (maybeJpaProduct.equals("")){
+        if(maybeJpaProduct.isEmpty()) {
             log.info("정보가 없습니다!");
             return null;
         }
-
         return maybeJpaProduct.get();
     }
 }

@@ -27,8 +27,8 @@ public class JpaProductController {
     }
 
     @GetMapping("/{productId}")
-    public JpaProduct readProduct (@PathVariable("productId") Long productId){
-        log.info("productId()");
+    public JpaProduct readBoard (@PathVariable("productId") Long productId) {
+        log.info("productRead()");
 
         return productService.read(productId);
     }
