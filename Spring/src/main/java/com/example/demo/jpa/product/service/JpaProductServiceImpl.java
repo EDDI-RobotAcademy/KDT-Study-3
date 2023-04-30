@@ -1,5 +1,6 @@
 package com.example.demo.jpa.product.service;
 
+import com.example.demo.jpa.product.controller.form.RequestProductForm;
 import com.example.demo.jpa.product.entity.JpaProduct;
 import com.example.demo.jpa.product.repository.JpaProductRepository;
 import lombok.RequiredArgsConstructor;
@@ -40,5 +41,22 @@ public class JpaProductServiceImpl implements JpaProductService {
     @Override
     public void delete(Long productId) {
         productRepository.deleteById(productId);
+    }
+
+    @Override
+    public JpaProduct modify(Long productId, RequestProductForm requestProductForm) {
+        Optional<JpaProduct> maybeJpaProduct = productRepository.findById(productId);
+
+        if (maybeJpaProduct.isEmpty()) {
+            log.info("정보가 없습니다!");
+            return null;
+        }
+
+        JpaProduct product = maybeJpaProduct.get();
+        product.setProductPrice(requestProductForm.getProductPrice());
+        product.setVendor(requestProductForm.getVendor());
+        product.setCategory(requestProductForm.getCategory());
+
+        return productRepository.save(product);
     }
 }
