@@ -17,9 +17,11 @@ public class RequestProductForm {
     final private String vendor;
     @JsonFormat(pattern="yyyy-MM-dd")
     final private LocalDate manufactureDate;
+    @JsonFormat(pattern="yyyy-MM-dd")
+    final private LocalDate expiredDate;
     final private String category;
 
     public JpaProduct toJpaProduct () {
-        return new JpaProduct(productName, productPrice, vendor, manufactureDate, category);
+        return new JpaProduct(productName, productPrice, vendor, manufactureDate, expiredDate, category);
     }
 }

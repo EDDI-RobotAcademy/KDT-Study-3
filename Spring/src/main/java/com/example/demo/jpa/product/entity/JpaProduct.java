@@ -29,13 +29,16 @@ public class JpaProduct {
     private String vendor;
     private LocalDate manufactureDate;
     @Setter
+    private LocalDate expiredDate;
+    @Setter
     private String category;        // 상품 카테고리
 
-    public JpaProduct(String productName, Integer productPrice, String vendor, LocalDate manufactureDate, String category) {
+    public JpaProduct(String productName, Integer productPrice, String vendor, LocalDate manufactureDate, LocalDate expiredDate, String category) {
         this.productName = productName;
         this.productPrice = productPrice;
         this.vendor = vendor;
         this.manufactureDate = manufactureDate;
+        this.expiredDate = expiredDate;
         this.category = category;
     }
 
