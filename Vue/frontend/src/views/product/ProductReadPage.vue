@@ -42,7 +42,11 @@ export default {
     },
     created() {
             this.requestProductToSpring(this.productId)
-        },
+    },
+    async onDelete () {
+            await this.requestDeleteProductToSpring(this.productId)
+            await this.$router.push({ name: 'ProductListPage' })
+        }
     }
 </script>
 
