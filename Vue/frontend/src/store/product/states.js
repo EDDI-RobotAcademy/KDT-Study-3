@@ -1,4 +1,4 @@
 export default {
-    productList: [],
+    products: [],
     product: {},
 }
