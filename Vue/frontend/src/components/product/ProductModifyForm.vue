@@ -46,7 +46,7 @@
                 :to = "{
                     name: 'ProductReadPage',
                     params: { productId: product.productId.toString() },
-                }">Cancel
+                }">To Read Page
                 </router-link>
             </div>
         </form>

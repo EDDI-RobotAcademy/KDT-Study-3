@@ -1,8 +1,8 @@
 <template>
   <v-container>
     <div>
-      <nav>        
-        <router-link to="/product-list-page">Product List</router-link> |
+      <nav>
+        <router-link to="/product-list-page">Product Board</router-link>
       </nav>
     </div>
   </v-container>

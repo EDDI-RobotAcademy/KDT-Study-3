@@ -1,11 +1,12 @@
 <template lang="">
     <div>
-        <h3>상품 목록</h3>
+        <h3>Product List</h3>
         <table>
             <tr>
-                <th align="center" width="5%">번호</th>
-                <th align="center" width="70%">제목</th>
-                <th align="center" width="25%">등록일자</th>
+                <th align="center" width="5%">product Number</th>
+                <th align="center" width="50%">product Name</th>
+                <th align="center" width="10">product Price</th>
+                <th align="center" width="35%">Registration Date</th>
             </tr>
             <tr v-if="!products || (Array.isArray(products) && products.length === 0)">
                 <td colspan="4">
@@ -23,6 +24,9 @@
                     }">
                     {{ product.productName }}
                     </router-link>
+                </td>
+                <td align="center">
+                    {{ product.productPrice }}
                 </td>
                 <td align="center">
                     {{ product.createDate }}
