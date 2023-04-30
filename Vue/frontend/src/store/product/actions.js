@@ -15,8 +15,8 @@ export default {
             });
     },
     requestRegistProductToSpring({}, payload) {
-        const {productName, productPrice, vendor, menufactureDate, category} = payload
-        return axiosInst.post('/jpa-product/register', {productName, productPrice, vendor, menufactureDate, category})
+        const {productName, productPrice, vendor, manufactureDate, category} = payload
+        return axiosInst.post('/jpa-product/register', {productName, productPrice, vendor, manufactureDate, category})
             .then((res) => {
                 alert('Product registration success')
                 return res

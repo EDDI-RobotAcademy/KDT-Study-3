@@ -1,9 +1,9 @@
-<template lang="">
+<template>
     <div>
         <form @submit.prevent="onSubmit">
             <table>
                 <tr>
-                    <td>Product Number</td>
+                    <td>Product ID</td>
                     <td>
                         <input type="text" :value="product.productId" disabled/>
                     </td>
@@ -86,4 +86,4 @@ export default {
 };
 </script>
 
-<style lang=""></style>
+<style></style>
