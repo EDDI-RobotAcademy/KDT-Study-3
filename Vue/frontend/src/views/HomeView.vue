@@ -2,7 +2,7 @@
   <v-container>
     <div>
       <nav>
-        <router-link to="/product-list-page">상품 게시판</router-link>
+        <router-link to="/product-list-page">Product Board</router-link>
       </nav>
     </div>
   </v-container>

@@ -1,8 +1,8 @@
 <template>
     <div>
-        <h2>상품 게시물 수정</h2>
+        <h2>Product Modify Page</h2>
         <product-modify-form v-if="product" :product="product" @submit="onSubmit"/>
-        <p v-else>로딩중입니다 .......</p>
+        <p v-else>Loading .......</p>
     </div>
 </template>
 
