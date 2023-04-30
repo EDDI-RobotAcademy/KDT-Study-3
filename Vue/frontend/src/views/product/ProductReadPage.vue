@@ -34,20 +34,20 @@ export default {
     computed: {
         ...mapState(productModule,['product'])
     },
-
     methods: {     
         ...mapActions(
             productModule, ['requestProductToSpring', 'requestDeleteProductToSpring']
         ),
-    },
-    created() {
-            this.requestProductToSpring(this.productId)
-    },
-    async onDelete () {
+        async onDelete () {
             await this.requestDeleteProductToSpring(this.productId)
             await this.$router.push({ name: 'ProductListPage' })
         }
-    }
+    },
+    created() {
+            console.log(this.productId);
+            this.requestProductToSpring(this.productId)
+    },
+}   
 </script>
 
 <style></style>
