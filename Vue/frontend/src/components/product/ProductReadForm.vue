@@ -30,6 +30,12 @@
                 <td>
                     <input type="text" :value="product.manufactureDate" readonly/>
                 </td>
+            </tr>
+            <tr>
+                <td>Expired Date</td>
+                <td>
+                    <input type="text" :value="product.expiredDate" readonly/>
+                </td>
             </tr>  
             <tr>
                 <td>Category</td>
