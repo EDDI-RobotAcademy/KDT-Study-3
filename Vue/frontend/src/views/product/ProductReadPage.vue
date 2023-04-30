@@ -37,7 +37,7 @@ export default {
 
     methods: {     
         ...mapActions(
-            productModule, ['requestProductToSpring']
+            productModule, ['requestProductToSpring', 'requestDeleteProductToSpring']
         ),
     },
     created() {

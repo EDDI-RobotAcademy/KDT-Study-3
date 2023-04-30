@@ -17,7 +17,12 @@
                     {{ product.productId }}
                 </td>
                 <td align="center">
+                    <router-link :to="{
+                        name: 'ProductReadPage',
+                        params: { productId: product.productId.toString()}
+                    }">
                     {{ product.productName }}
+                    </router-link>
                 </td>
                 <td align="center">
                     {{ product.createDate }}
