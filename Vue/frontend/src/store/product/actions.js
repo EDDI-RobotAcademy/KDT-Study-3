@@ -26,16 +26,9 @@ export default {
             })
     },
     requestProductModifyToSpring({}, payload){
-        const { productName, productPrice, vendor, category } = payload;
+        const { productId, productName, productPrice, vendor, category } = payload;
 
-        console.log(
-            "productName: "+productName+
-            "productPrice: "+productPrice+
-            "vendor: "+vendor+
-            "category: "+category
-            );
-
-            return axiosInst.put(`/jpa-product/${productId}`, {productName, productPrice, vendor, category})
+        return axiosInst.put(`/jpa-product/${productId}`, {productName, productPrice, vendor, category})
             .then((res) => {
                 alert("상품 수정 성공!");
             })

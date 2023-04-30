@@ -23,7 +23,7 @@
                 <tr>
                     <td>Vendor</td>
                     <td>
-                        <input type="text" :v-model="product.vendor" />
+                        <input type="text" v-model="vendor" />
                     </td>
                 </tr>  
                 <tr>
@@ -35,7 +35,7 @@
                 <tr>
                     <td>Category</td>
                     <td>
-                        <input type="text" v-model="product.category" />
+                        <input type="text" v-model="category" />
                     </td>
                 </tr>            
             </table>
@@ -80,7 +80,7 @@ export default {
     methods: {
         onSubmit() {
             const {productName, productPrice, vendor, category} = this
-            this.$emit("submit", {productName, productPrice, vendor, category});
+            this.$emit('submit', {productName, productPrice, vendor, category});
         },
     },
 };
