@@ -5,9 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.CreatedDate;
 
@@ -25,9 +23,12 @@ public class JpaProduct {
     private Long productId; // 상품 아이디
 
     private String productName;     // 상품명
+    @Setter
     private Integer productPrice;    // 상품 가격
+    @Setter
     private String vendor;
     private LocalDate manufactureDate;
+    @Setter
     private String category;        // 상품 카테고리
 
     public JpaProduct(String productName, Integer productPrice, String vendor, LocalDate manufactureDate, String category) {

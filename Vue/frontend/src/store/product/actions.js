@@ -43,4 +43,13 @@ export default {
                 alert("문제 발생!");
             });
     },
+    requestDeleteProductToSpring ({}, productId) {
+        return axiosInst.delete(`/jpa-product/${productId}`)
+            .then((res) => {
+                alert('삭제 성공!')
+            })
+            .catch(() => {
+                alert('문제 발생!')
+            })
+    }
 };

@@ -43,4 +43,12 @@ public class JpaProductController {
         log.info("delete " + productId);
         productService.delete(productId);
     }
+
+    @PutMapping("/{productId}")
+    public JpaProduct modifyProduct (@PathVariable("productId") Long productId,
+                                 @RequestBody RequestProductForm requestProductForm) {
+        log.info("modifyProduct(): " + requestProductForm + ", id: " + productId);
+
+        return productService.modify(productId, requestProductForm);
+    }
 }
