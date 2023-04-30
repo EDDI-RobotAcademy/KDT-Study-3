@@ -16,9 +16,14 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/product-modify-page',
+    path: '/product-modify-page/:productId',
     name: "ProductModifyPage",
-    component: ProductModifyPage,
+    components: {
+      default: ProductModifyPage
+    },
+    props: {
+      default: true
+    },
   },
   {
     path: '/about',
