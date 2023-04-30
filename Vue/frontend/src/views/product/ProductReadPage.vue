@@ -1,10 +1,10 @@
 <template>
     <div>
-        <h2>Product Page</h2>
+        <h2>Product Read Page</h2>
         <product-read-form v-if="product" :product="product"/>
         <p v-else>Loading ...</p>
         <router-link :to="{ name: 'ProductModifyPage', params: { productId }}">
-            Modify Page
+            To Modify Page
         </router-link>
         <button @click="onDelete">
             Delete
