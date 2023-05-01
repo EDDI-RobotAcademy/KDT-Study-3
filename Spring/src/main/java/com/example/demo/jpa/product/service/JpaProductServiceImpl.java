@@ -27,7 +27,7 @@ public class JpaProductServiceImpl implements JpaProductService {
     public JpaProduct read(Long productId) {
         Optional<JpaProduct> maybeJpaProduct = productRepository.findById(productId);
 
-        if(maybeJpaProduct == null) {
+        if(maybeJpaProduct.isEmpty()) {
             log.info("정보가 없습니다!");
             return null;
         }
@@ -47,7 +47,7 @@ public class JpaProductServiceImpl implements JpaProductService {
     public JpaProduct modify(Long productId, RequestProductForm requestProductForm) {
         Optional<JpaProduct> maybeJpaProduct = productRepository.findById(productId);
 
-        if (maybeJpaProduct == null) {
+        if (maybeJpaProduct.isEmpty()) {
             log.info("정보가 없습니다!");
             return null;
         }
