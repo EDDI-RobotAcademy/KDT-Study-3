@@ -1,12 +1,12 @@
-<template lang="">
+<template>
     <div>
         <h3>Product List</h3>
         <table>
             <tr>
-                <th align="center" width="5%">product Number</th>
-                <th align="center" width="50%">product Name</th>
-                <th align="center" width="10">product Price</th>
-                <th align="center" width="35%">Registration Date</th>
+                <th style="text-align: center; width: 5%">product Number</th>
+                <th style="text-align: center; width: 50%">product Name</th>
+                <th style="text-align: center; width: 10%">product Price</th>
+                <th style="text-align: center; width: 35%">Registration Date</th>
             </tr>
             <tr v-if="!products || (Array.isArray(products) && products.length === 0)">
                 <td colspan="4">
@@ -14,7 +14,7 @@
                 </td>
             </tr>
             <tr v-else v-for="(product, index) in products" :key="index">
-                <td align="center">
+                <td style="text-align: center">
                     {{ product.productId }}
                 </td>
                 <td align="center">
@@ -25,10 +25,10 @@
                     {{ product.productName }}
                     </router-link>
                 </td>
-                <td align="center">
+                <td style="text-align: center">
                     {{ product.productPrice }}
                 </td>
-                <td align="center">
+                <td style="text-align: center">
                     {{ product.createDate }}
                 </td>
             </tr>
