@@ -31,7 +31,13 @@
                     <td>
                         <input type="text" :value="product.manufactureDate" disabled/>
                     </td>
-                </tr>  
+                </tr>
+                <tr>
+                    <td>Expired Date</td>
+                    <td>
+                        <input type="text" :value="product.localDateTime" disabled/>
+                    </td>
+                </tr>    
                 <tr>
                     <td>Category</td>
                     <td>

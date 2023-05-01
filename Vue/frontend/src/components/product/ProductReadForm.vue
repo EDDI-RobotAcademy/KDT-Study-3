@@ -34,7 +34,7 @@
             <tr>
                 <td>Expired Date</td>
                 <td>
-                    <input type="text" :value="product.expiredDate" readonly/>
+                    <input type="text" :value="product.localDateTime" readonly/>
                 </td>
             </tr>  
             <tr>
