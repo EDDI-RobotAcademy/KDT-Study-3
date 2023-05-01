@@ -17,7 +17,7 @@
                 <tr>
                     <td>Product Price</td>
                     <td>
-                        <input type="text" v-model="productPrice" />
+                        <input type="number" v-model="productPrice" />
                     </td>
                 </tr>  
                 <tr>
@@ -29,7 +29,7 @@
                 <tr>
                     <td>Manufacture Date</td>
                     <td>
-                        <input type="text" :value="product.manufactureDate" disabled/>
+                        <input type="date" :value="product.manufactureDate" disabled/>
                     </td>
                 </tr>
                 <tr>
@@ -41,7 +41,15 @@
                 <tr>
                     <td>Category</td>
                     <td>
-                        <input type="text" v-model="category" />
+                        <td>
+                        <select type="text" v-model="category">
+                            <option value> sellect category</option>
+                            <option value="top">top</option>
+                            <option value="pants">pants</option>
+                            <option value="hat">hat</option>
+                            <option value="shoes">shoes</option>
+                        </select>
+                        </td>
                     </td>
                 </tr>            
             </table>
